@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Canary · Reference</title>
+    <meta name="description" content="A minimal, accessible, light and dark themed static HTML reference.">
+
+    <!-- Viewport for responsive layout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Declare support for light and dark colour schemes -->
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Social media preview -->
+    <meta property="og:title" content="Canary · Reference">
+    <meta property="og:description" content="A minimal, accessible, light and dark themed static HTML reference.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Link to the Canary stylesheet -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--
+      Skip link:
+      - Always the first focusable element.
+      - Lets keyboard users jump straight to <main>.
+    -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!--
+      Main page wrapper:
+      - Contains header, main, and footer.
+      - Positioned after the checkbox so :checked ~ .canary-page works.
+    -->
+    <div class="canary-page">
+      <!--
+        Header landmark:
+        - Contains site title and primary navigation.
+      -->
+      <header class="canary-header">
+        <div class="canary-title">
+          <!-- Decorative dot for identity; hidden from assistive tech -->
+          <span class="canary-dot" aria-hidden="true"></span>
+          <span>Canary</span>
+        </div>
+
+        <!--
+          Primary navigation:
+          - aria-label gives a clear name in landmark lists.
+        -->
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="/posts/">Posts</a></li>
+            <li><a href="/notes/">Notes</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!--
+        Main landmark:
+        - Target for the skip link.
+        - Should start with the primary <h1> for the page.
+      -->
+      <main id="main">
+        <!--
+          Example: page-level introduction.
+          - Use one <h1> per page where possible.
+        -->
+        <article>
+          <header>
+            <h1>Canary HTML Reference</h1>
+            <p class="meta">
+              Demonstration of layout, typography, theme toggle, and components.
+            </p>
+          </header>
+          <p>
+            Use this page as a working template when building your site.
+            Remove what you do not need and adapt the structure to your content.
+          </p>
+        </article>
+
+        <!-- Headings and basic text styles -->
+        <article>
+          <header>
+            <h2>Headings and paragraphs</h2>
+            <p class="meta">h1, h2, h3, h4 and text flow</p>
+          </header>
+
+          <h2>Heading level 1</h2>
+          <p>A short paragraph under an h2.</p>
+
+          <h3>Heading level 2</h3>
+          <p>A paragraph under an h3 for major sections.</p>
+
+          <h4>Heading level 3</h4>
+          <p>A paragraph under an h4, often for subsections.</p>
+
+          <p>
+            Inline elements:
+            <strong>strong text</strong>,
+            <em>emphasised text</em>, and a
+            <a href="https://example.com">sample link</a>.
+          </p>
+
+          <p>
+            <small>Small text for quiet notes or captions.</small>
+          </p>
+        </article>
+
+        <!-- Image example -->
+        <article>
+          <header>
+            <h2>Images</h2>
+            <p class="meta">Responsive images with alt text</p>
+          </header>
+
+          <figure>
+            <img src="img/canary.jpg" alt="A yellow canary bird perched on a tree branch" style="width:100%;height:auto;border-radius:0.5rem;margin:1rem 0;">
+            <figcaption style="font-size:0.85rem;color:var(--canary-muted);margin-top:0.5rem;">
+              Photo by César Ardila on <a href="https://unsplash.com/photos/a-yellow-bird-perched-on-a-tree-branch-027HVsOPKsw">Unsplash</a>
+            </figcaption>
+          </figure>
+
+          <p>
+            Always include descriptive <code>alt</code> text for images, and use semantic <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements for illustrations with captions.
+          </p>
+        </article>
+
+        <!-- Lists: unordered and ordered -->
+        <article>
+          <header>
+            <h2>Lists</h2>
+            <p class="meta">Unordered and ordered lists</p>
+          </header>
+
+          <h3>Unordered list</h3>
+          <ul>
+            <li>Content first, design second.</li>
+            <li>Use short paragraphs and clear headings.</li>
+            <li>Prefer meaningful link text.</li>
+          </ul>
+
+          <h3>Ordered list</h3>
+          <ol>
+            <li>Copy this reference file.</li>
+            <li>Strip out demo content.</li>
+            <li>Add your own pages and routes.</li>
+          </ol>
+        </article>
+
+        <!-- Blockquote with citation -->
+        <article>
+          <header>
+            <h2>Blockquote</h2>
+            <p class="meta">Quoted text with citation and source</p>
+          </header>
+
+          <p>Lead into a quotation with a normal paragraph.</p>
+
+          <!--
+            Blockquote:
+            - cite attribute can point to the source URL.
+            - <cite> inside gives a readable attribution.
+          -->
+          <blockquote cite="https://example.com/source-of-quote">
+            <p>
+              Good tools are almost invisible; they let you stay with the work
+              instead of the interface.
+            </p>
+            <cite>Someone sensible</cite>
+          </blockquote>
+
+          <p>
+            Follow-on text shows how spacing behaves after the quote.
+          </p>
+        </article>
+
+        <!-- Code, preformatted blocks, and keyboard input -->
+        <article>
+          <header>
+            <h2>Code, preformatted text, and kbd</h2>
+            <p class="meta">Inline code, code blocks, and keyboard input</p>
+          </header>
+
+          <p>
+            Inline code looks like <code>git status</code> or
+            <code>&lt;section&gt;</code>.
+          </p>
+
+          <p>
+            Keyboard input can use
+            <kbd>Tab</kbd> to move between links, or
+            <kbd>Ctrl</kbd> + <kbd>C</kbd> /
+            <kbd>⌘</kbd> + <kbd>C</kbd> as examples.
+          </p>
+
+          <!--
+            Preformatted block:
+            - Ideal for longer snippets or configuration examples.
+          -->
+          <pre><code>&lt;article&gt;
+  &lt;header&gt;
+    &lt;h2&gt;Example&lt;/h2&gt;
+    &lt;p class="meta"&gt;Meta information&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Body text for the article.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+        </article>
+
+        <!-- Index-style multiple article layout -->
+        <article>
+          <header>
+            <h2>Multiple articles</h2>
+            <p class="meta">Index or archive layout</p>
+          </header>
+
+          <p>
+            Below are smaller cards showing how notes or posts might appear on an index page.
+          </p>
+        </article>
+
+        <!-- Short note example -->
+        <article>
+          <header>
+            <h3>Short note example</h3>
+            <p class="meta">2025-12-04 · Note</p>
+          </header>
+          <p>
+            A brief note suitable for quick updates, bookmarks, or link posts.
+          </p>
+        </article>
+
+        <!-- Longer post example -->
+        <article>
+          <header>
+            <h3>Longer post example</h3>
+            <p class="meta">2025-12-01 · Post</p>
+          </header>
+          <p>
+            A longer post starts with context, explains why the topic matters,
+            and links out where helpful.
+          </p>
+          <p>
+            Additional paragraphs keep the rhythm readable rather than dense.
+          </p>
+        </article>
+      </main>
+
+      <!--
+        Footer landmark:
+        - Site-level metadata and guidance.
+      -->
+      <footer>
+        <p>
+          Canary theme by <a href="https://dougbelshaw.com">Doug Belshaw</a> • Licensed under <a href="/LICENCE">MIT</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
