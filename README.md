@@ -2,7 +2,7 @@
 
 Ultra-minimal, fast, accessible HTML theme.
 
-![Screenshot](img/screenshot.png)
+![Screenshot of Canary](img/screenshot.png)
 
 ## Features
 
