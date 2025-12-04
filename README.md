@@ -9,7 +9,7 @@ Ultra-minimal, fast, accessible HTML theme.
 - **Semantic HTML5** — Proper landmarks and structure for screen readers
 - **Accessible** — WCAG 2.1 AA compliant, keyboard navigation, focus states
 - **Fast** — ~5 KB of minified CSS, system fonts, no dependencies
-- **Responsive** — Mobile-first, flexible layout
+- **Responsive** — Mobile-first, flexible layout, dark/light modes
 - **Reference pages** — Examples of headings, lists, blockquotes, code, images
 
 ## Getting Started
