@@ -1,11 +1,12 @@
 # Canary
 
-Ultra-minimal, fast, accessible HTML theme with automatic dark/light mode support.
+Ultra-minimal, fast, accessible HTML theme.
+
+![Screenshot](img/screenshot.png)
 
 ## Features
 
 - **Semantic HTML5** — Proper landmarks and structure for screen readers
-- **Dark/light mode** — Auto-detects system preference via `prefers-color-scheme`
 - **Accessible** — WCAG 2.1 AA compliant, keyboard navigation, focus states
 - **Fast** — ~5 KB of minified CSS, system fonts, no dependencies
 - **Responsive** — Mobile-first, flexible layout
